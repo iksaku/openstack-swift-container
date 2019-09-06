@@ -28,10 +28,21 @@ Uppon running this image, it will automatically execute the `swift` command, fol
     | OS_AUTH_URL     | https://api.example.com:5000/v3   |
 
     In order to tell docker to include those variables during runtime, we need to execute the following:
+
     ```sh
-    docker run -e ST_AUTH_VERSION -e OS_USER_ID -e OS_PASSWORD -e OS_PROJECT_ID -e OS_AUTH_URL openstack-swift-container <args>
+    docker run -e ST_AUTH_VERSION -e OS_USER_ID -e OS_PASSWORD -e OS_PROJECT_ID -e OS_AUTH_URL openstack-swift-container --version
     ```
+
     If the image is unable to authenticate against your service provider, it will show an error message and exit from execution.
+
+  - #### Skip Authentication Pre-Check
+    By default, this image does a pre-check of authentication against your service provider before running your specified Swift command.
+    You can disable this behaviour by passing the `INPUT_AUTH_CHECK` environment variable with a string value of `'false'`:
+
+    ```sh
+    INPUT_AUTH_CHECK='false'
+    docker run -e ST_AUTH_VERSION -e OS_USER_ID -e OS_PASSWORD -e OS_PROJECT_ID -e OS_AUTH_URL -e INPUT_AUTH_CHECK openstack-swift-container --version
+    ```
 
   - #### Swift Commands
     To execute [Swift Commands](https://docs.openstack.org/python-swiftclient/stein/cli/index.html#cli-commands) with this image, we need to call them via `args` in the `docker run` command.
