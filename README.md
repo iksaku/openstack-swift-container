@@ -42,7 +42,7 @@ Uppon running this image, it will automatically execute the `swift` command, fol
     ```sh
     INPUT_AUTH_CHECK='false'
     docker run -e ST_AUTH_VERSION -e OS_USER_ID -e OS_PASSWORD -e OS_PROJECT_ID -e OS_AUTH_URL -e INPUT_AUTH_CHECK openstack-swift-container --version
-    ```
+    ``` 
 
   - #### Swift Commands
     To execute [Swift Commands](https://docs.openstack.org/python-swiftclient/stein/cli/index.html#cli-commands) with this image, we need to call them via `args` in the `docker run` command.
