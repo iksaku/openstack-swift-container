@@ -10,8 +10,8 @@ RUN apk add --no-cache --virtual .build-deps \
 RUN pip install --upgrade --no-cache-dir \
     pip \
     setuptools \
-    python-swiftclient==3.8.1 \
-    python-keystoneclient==3.21.0
+    python-swiftclient==3.9.0 \
+    python-keystoneclient==3.22.0
 
 # Uninstall Build Dependencies...
 RUN apk del .build-deps
