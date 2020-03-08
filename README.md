@@ -1,5 +1,10 @@
 # OpenStack Swift Container
 
+## Tags
+- [`latest`, `ussuri-dev`, `3-dev`, `3.9-dev`, `3.9.0-dev`](https://github.com/iksaku/openstack-swift-container/blob/master/Dockerfile)
+- [`train`, `3`, `3.8`, `3.8.1`](https://github.com/iksaku/openstack-swift-container/blob/train/Dockerfile)
+- [`stein`, `3.7`, `3.7.1`](https://github.com/iksaku/openstack-swift-container/blob/stein/Dockerfile)
+
 ## Description
 This container comes with an installation of OpenStack's Swift and Keystone CLI clients.
 
