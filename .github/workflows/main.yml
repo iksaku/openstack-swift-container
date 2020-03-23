@@ -24,12 +24,12 @@ jobs:
 
       - name: "[Test] Lists files"
         env:
-          OS_AUTH_URL: ${{ secrets.AUTH_URL }}
-          OS_PASSWORD: ${{ secrets.PASSWORD }}
-          OS_PROJECT_NAME: ${{ secrets.PROJECT_NAME }}
-          OS_REGION_NAME: ${{ secrets.REGION_NAME }}
-          OS_USERNAME: ${{ secrets.USERNAME }}
-          OS_USER_DOMAIN_NAME: ${{ secrets.USER_DOMAIN_NAME }}
+          OS_AUTH_URL: ${{ secrets.OS_AUTH_URL }}
+          OS_PASSWORD: ${{ secrets.OS_PASSWORD }}
+          OS_PROJECT_NAME: ${{ secrets.OS_PROJECT_NAME }}
+          OS_REGION_NAME: ${{ secrets.OS_REGION_NAME }}
+          OS_USERNAME: ${{ secrets.OS_USERNAME }}
+          OS_USER_DOMAIN_NAME: ${{ secrets.OS_USER_DOMAIN_NAME }}
         run: docker run --rm -e OS_AUTH_URL -e OS_PASSWORD -e OS_PROJECT_NAME -e OS_REGION_NAME -e OS_USERNAME -e OS_USER_DOMAIN_NAME iksaku/openstack-swift-container list openstack-swift-action
 
   push:
