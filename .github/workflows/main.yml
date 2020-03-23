@@ -14,12 +14,13 @@ jobs:
         uses: docker/build-push-action@v1.0.0
         with:
           repository: iksaku/openstack-swift-container
+          tags: latest
           push: false
 
       - name: "[Test] Print Swift Version"
         env:
           INPUT_AUTH_CHECK: false
-        run: docker run iksaku/openstack-swift-container --version
+        run: docker run --rm -e INPUT_AUTH_CHECK iksaku/openstack-swift-container --version
 
       - name: "[Test] Lists files"
         env:
@@ -29,12 +30,13 @@ jobs:
           OS_REGION_NAME: ${{ secrets.REGION_NAME }}
           OS_USERNAME: ${{ secrets.USERNAME }}
           OS_USER_DOMAIN_NAME: ${{ secrets.USER_DOMAIN_NAME }}
-        run: docker run iksaku/openstack-swift-container list openstack-swift-action
+        run: docker run --rm -e OS_AUTH_URL -e OS_PASSWORD -e OS_PROJECT_NAME -e OS_REGION_NAME -e OS_USERNAME -e OS_USER_DOMAIN_NAME iksaku/openstack-swift-container list openstack-swift-action
 
   push:
     name: Push to Docker Registry
     runs-on: ubuntu-latest
     if: github.repository == 'iksaku/openstack-swift-container'
+    needs: tests
     steps:
       - name: Checkout
         uses: actions/checkout@v1
