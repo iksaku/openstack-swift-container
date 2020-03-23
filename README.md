@@ -1,5 +1,7 @@
 # OpenStack Swift Container
 
+![CI/CD](https://github.com/iksaku/openstack-swift-container/workflows/CI/CD/badge.svg)
+
 ## Tags
 - [`ussuri-dev`, `3-dev`, `3.9-dev`, `3.9.0-dev`](https://github.com/iksaku/openstack-swift-container/blob/master/Dockerfile)
 - [`train`, `3`, `3.8`, `3.8.1`](https://github.com/iksaku/openstack-swift-container/blob/train/Dockerfile)
