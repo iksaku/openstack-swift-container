@@ -11,7 +11,7 @@
   - [Swift Commands](#swift-commands)
 
 ## Tags
-- [`ussuri-dev`, `3-dev`, `3.9-dev`, `3.9.0-dev`](https://github.com/iksaku/openstack-swift-container/blob/master/Dockerfile)
+- [`ussuri`, `3`, `3.9`, `3.9.0`](https://github.com/iksaku/openstack-swift-container/releases/tag/v3.9.0)
 - [`train`, `3`, `3.8`, `3.8.1`](https://github.com/iksaku/openstack-swift-container/releases/tag/v3.8.1)
 - [`stein`, `3.7`, `3.7.1`](https://github.com/iksaku/openstack-swift-container/releases/tag/v3.7.1)
 

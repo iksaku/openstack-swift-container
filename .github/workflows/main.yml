@@ -47,4 +47,4 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: iksaku/openstack-swift-container
-          tags: ussuri-dev,3-dev,3.9-dev,3.9.0-dev
+          tags: ussuri,3,3.9,3.9.0
