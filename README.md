@@ -2,6 +2,14 @@
 
 ![CI/CD](https://github.com/iksaku/openstack-swift-container/workflows/CI/CD/badge.svg)
 
+## Table of Contents
+- [Tags](#tags)
+- [Description](#description)
+- [Usage](#usage)
+  - [Authentication](#authentication)
+  - [Skip Authentication Pre-Check](#skip-authentication-pre-check)
+  - [Swift Commands](#swift-commands)
+
 ## Tags
 - [`ussuri-dev`, `3-dev`, `3.9-dev`, `3.9.0-dev`](https://github.com/iksaku/openstack-swift-container/blob/master/Dockerfile)
 - [`train`, `3`, `3.8`, `3.8.1`](https://github.com/iksaku/openstack-swift-container/blob/train/Dockerfile)
